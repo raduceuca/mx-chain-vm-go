@@ -10,6 +10,7 @@ import (
 	"github.com/ElrondNetwork/arwen-wasm-vm/arwen"
 	"github.com/ElrondNetwork/arwen-wasm-vm/mock"
 	vmcommon "github.com/ElrondNetwork/elrond-vm-common"
+	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
 
@@ -273,6 +274,20 @@ func TestExecution_CallSCMethod(t *testing.T) {
 	require.Nil(t, err)
 	require.NotNil(t, vmOutput)
 	require.Equal(t, vmcommon.FunctionNotFound, vmOutput.ReturnCode)
+}
+
+func TestCoinEvent(t *testing.T) {
+	code := GetTestSCCode("simple-coin", "../../")
+	host, _ := DefaultTestArwenForCall(t, code)
+
+	input := DefaultTestContractCallInput()
+	input.GasProvided = 900000
+	input.Function = "approve"
+	//input.Arguments = [][]byte{{15}}
+
+	vmOutput, err := host.RunSmartContractCall(input)
+	assert.Nil(t, err)
+	assert.NotNil(t, vmOutput)
 }
 
 func TestExecution_Call_Successful(t *testing.T) {
