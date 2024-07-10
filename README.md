@@ -1,7 +1,7 @@
 <p align="center">  
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/raduceuca/mx-chain-vm-go/blob/c33a8319fbf527cc5113158a4d29b1d0ffacc313/.github/spacevm-darmmode.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://github.com/raduceuca/mx-chain-vm-go/blob/c33a8319fbf527cc5113158a4d29b1d0ffacc313/.github/spacevm-lightmode.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/raduceuca/mx-chain-vm-go/blob/c33a8319fbf527cc5113158a4d29b1d0ffacc313/.github/spacevm-darmmode.svg">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/raduceuca/mx-chain-vm-go/blob/c33a8319fbf527cc5113158a4d29b1d0ffacc313/.github/spacevm-lightmode.svg">
       <img alt="MultiversX SpaceVM" src="https://github.com/raduceuca/mx-chain-vm-go/blob/c33a8319fbf527cc5113158a4d29b1d0ffacc313/.github/spacevm-lightmode.svg" width="397" height="70" style="max-width: 100%;">
     </picture>
 </p>
